@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    flex-direction: column;overflow-y:hidden;
+}
+h1{color: white;}
+.div_top{
+    display: flex;flex: 1;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* padding-top: 10px; */
+    background-image: url('images/pattern-bg.png') ;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    justify-content: center;
+}
+.inp{
+    display: grid;
+    grid-template-columns: 600px 50px;
+    flex-basis: 40px;
+    /* padding: 30px; */
+    padding-bottom: 30px;
+}
+.inp input{
+    flex: 4;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 18px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    border: none;
+    padding: 15px;
+    padding-left: 30px;
+}
+.inp input:focus{
+    outline: none;
+}
+button{
+    background-color: black;
+    border: 1px solid black;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.res{width: 70%;background-color: white;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+justify-content: center;
+margin-bottom: -50px;
+border-radius: 10px;
+z-index: 5;}
+.res div{
+    text-align: center;
+    padding: 10px 15px;
+}
+h6{
+    color: hsl(0, 0%, 59%);
+}
+h3{
+    color: hsl(0, 0%, 17%);
+}
+#mapid{
+    height: 380px;
+    z-index: 2;
+    background:linear-gradient(to bottom,rgb(197, 193, 193),white);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width : 700px ) {
+    body{
+        overflow-y: auto;
+    }
+    .res{
+        display: flex;
+        flex-direction: column;
+    }
+    .res div{
+        padding: 5px;
+    }
+    .inp{
+        /* display: grid !important; */
+        grid-template-columns: 300px 50px;
+        padding-bottom: 25px ;
+    }
+    input{
+        padding-left: 15px !important;
+    }
+    #mapid{
+        height: 400px;
+    }
+}
